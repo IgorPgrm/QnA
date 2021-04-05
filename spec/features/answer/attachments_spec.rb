@@ -23,7 +23,8 @@ feature 'User can add attachment for answer' do
     it 'can add file on edit their answer', js: true do
       expect(page).to_not have_link 'rails_helper.rb'
       click_on 'Edit'
-      within '.links' do
+      first_link_block = first('.links')
+      within first_link_block do
         attach_file('answer[files][]', File.join(Rails.root, '/spec/rails_helper.rb'))
       end
       click_on 'Save'
@@ -32,7 +33,8 @@ feature 'User can add attachment for answer' do
 
     it 'can delete file in edit answer', js: true do
       click_on 'Edit'
-      within '.links' do
+      first_link_block = first('.links')
+      within first_link_block do
         attach_file('answer[files][]', File.join(Rails.root, '/spec/rails_helper.rb'))
       end
       click_on 'Save'
