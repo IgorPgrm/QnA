@@ -13,5 +13,6 @@ module FeatureHelpers
     click_on 'Edit'
     attach_file('question[files][]', File.join(Rails.root, '/spec/rails_helper.rb'))
     click_on 'Save'
+    wait_for_ajax
   end
 end

@@ -10,6 +10,12 @@
       = f.label :body, class: 'exampleFormControlTextarea1'
       = f.text_area :body, class: 'form-control'
 
+    #links
+      = f.fields_for :links do |link|
+        = render 'shared/link_fields', f: link
+        .links
+          = link_to_add_association 'Add link', f, :links, class: 'btn btn-primary', partial: 'shared/link_fields'
+
     .form-group
       = f.label :files, class: 'exampleFormControlFile1'
       = f.file_field :files, multiple: true, direct_upload: true, class: 'form-control-file'
