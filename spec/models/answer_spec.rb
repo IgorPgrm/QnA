@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Answer, type: :model do
-
   describe 'association' do
     it { should belong_to(:question) }
   end
@@ -29,6 +30,5 @@ RSpec.describe Answer, type: :model do
       best_answer.reload
       expect(best_answer.best).to eq false
     end
-
   end
 end

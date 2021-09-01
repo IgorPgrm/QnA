@@ -41,3 +41,4 @@ config/database.yml
 .gitignore
 .env
 .idea/
+coverage

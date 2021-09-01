@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 feature 'User can view the list of answers' do
   given!(:user) { create(:user) }
   given!(:question) { create(:question) }
-  given!(:answers){ create_list(:answer, 2, question: question) }
+  given!(:answers) { create_list(:answer, 2, question: question) }
 
   context 'Authenticate User' do
     background do

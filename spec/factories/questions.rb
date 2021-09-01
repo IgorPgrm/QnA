@@ -8,7 +8,6 @@ FactoryBot.define do
     trait :with_files do
       files { Rack::Test::UploadedFile.new("#{Rails.root}/spec/rails_helper.rb", 'text/plain') }
     end
-
   end
 
   factory :invalid_question, class: Question do

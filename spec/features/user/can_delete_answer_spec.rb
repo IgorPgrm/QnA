@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-feature 'User can delete answer', %q{
+feature 'User can delete answer', '
   User can deleted their answer
   User does not see links to delete
-} do
+' do
   given!(:user) { create(:user) }
   given!(:user2) { create(:user) }
   given!(:question1) { create(:question, user: user) }
