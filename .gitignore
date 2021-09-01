@@ -40,3 +40,4 @@ config/database.yml
 .rubocop_todo.yml
 .gitignore
 .env
+.idea/
