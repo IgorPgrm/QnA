@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 class AnswersController < ApplicationController
   before_action :authenticate_user!
   before_action :find_answer, only: %i[edit update destroy best]
   before_action :find_question, only: %i[create]
-
 
   def create
     @answer = current_user.answers.build(answer_params)

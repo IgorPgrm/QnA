@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 require 'factory_bot'
 
@@ -19,7 +21,9 @@ RSpec.describe AttachmentsController, type: :controller do
       before { login(author) }
 
       it 'changed count attachments' do
-        expect { delete :destroy, params: { id: question.files.first }, format: :js }.to change(question.files, :count).by(-1)
+        expect do
+          delete :destroy, params: { id: question.files.first }, format: :js
+        end.to change(question.files, :count).by(-1)
       end
     end
 
@@ -27,7 +31,9 @@ RSpec.describe AttachmentsController, type: :controller do
       before { login(nonauthor) }
 
       it 'tries delete not their record, not change count' do
-        expect { delete :destroy, params: { id: question.files.first }, format: :js }.to_not change(question.files, :count)
+        expect do
+          delete :destroy, params: { id: question.files.first }, format: :js
+        end.to_not change(question.files, :count)
       end
 
       it 'return forbidden for delete tries' do
@@ -36,5 +42,4 @@ RSpec.describe AttachmentsController, type: :controller do
       end
     end
   end
-
 end

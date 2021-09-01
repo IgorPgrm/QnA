@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 require 'support/factory_bot'
 
@@ -26,10 +28,11 @@ RSpec.describe AnswersController, type: :controller do
   describe 'POST #create' do
     before { login(user) }
     it 'with valid attributes' do
-      expect {
+      expect do
         post :create,
              params: { answer: attributes_for(:answer),
-                       question_id: question.id }, format: :js }.to change(question.answers, :count).by(1)
+                       question_id: question.id }, format: :js
+      end.to change(question.answers, :count).by(1)
     end
 
     it 'redirect to show view' do
@@ -38,9 +41,10 @@ RSpec.describe AnswersController, type: :controller do
     end
 
     it 'with invalid attributes' do
-      expect {
+      expect do
         post :create, params: { answer: attributes_for(:invalid_answer), question_id: question.id,
-                                user: user }, format: :js }.to_not change(Answer, :count)
+                                user: user }, format: :js
+      end.to_not change(Answer, :count)
     end
 
     it 're-renders view' do

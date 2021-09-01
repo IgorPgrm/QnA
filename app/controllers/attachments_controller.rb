@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AttachmentsController < ApplicationController
   before_action :find_attachment, only: :destroy
 

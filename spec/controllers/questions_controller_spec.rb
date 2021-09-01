@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 require 'support/factory_bot'
 
@@ -147,7 +149,6 @@ RSpec.describe QuestionsController, type: :controller do
         delete :destroy, params: { id: question }
         expect(response).to redirect_to questions_path
       end
-
     end
   end
 end
