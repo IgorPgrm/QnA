@@ -1,6 +1,7 @@
 # README
-
 QnA app
+![CI](https://github.com/IgorShum/QnA/actions/workflows/ci.yml/badge.svg)
+[![Test Coverage](https://codecov.io/gh/IgorShum/QnA/graph/badge.svg)](https://codecov.io/gh/IgorShum/QnA/)
 
 **Ruby version**
 ``2.7.2``
@@ -28,5 +29,3 @@ QnA app
    ``rspec``
 * Coverage file in folder
   ``coverage/index.html``
-
-![example branch parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=feature-1)
