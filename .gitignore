@@ -38,7 +38,8 @@ yarn-debug.log*
 config/database.yml
 .rubocop.yml
 .rubocop_todo.yml
-.gitignore
+/.gitignore
 .env
-.idea/
+
 coverage
+.idea/*
