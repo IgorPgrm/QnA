@@ -1,7 +1,7 @@
 # README
 QnA app
 ![CI](https://github.com/IgorShum/QnA/actions/workflows/ci.yml/badge.svg)
-[![Test Coverage](https://codecov.io/gh/IgorShum/QnA/graph/badge.svg)](https://codecov.io/gh/IgorShum/QnA/)
+[![codecov](https://codecov.io/gh/IgorShum/QnA/branch/master/graph/badge.svg)](https://codecov.io/gh/IgorShum/QnA)
 
 **Ruby version**
 ``2.7.2``
